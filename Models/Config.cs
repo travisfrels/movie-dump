@@ -4,7 +4,7 @@ namespace MovieDump.Models
 {
     public class Config
     {
-        [JsonProperty("libraries")]
-        public Library[] Libraries { get; set; }
+        [JsonProperty("plexDbConnection")]
+        public string PlexDbConnectionString { get; set; }
     }
 }
