@@ -34,7 +34,7 @@ WHERE meta.parent_id IS NULL;
                 res = conn.Query<Movie>(moviesQuery).ToList();
             }
 
-            return res.OrderBy(m => m.Title).ThenBy(x => x.Year);
+            return res.OrderBy(m => m.Title).ThenBy(x => x.Year).ThenBy(f => f.Format);
         }
     }
 }
