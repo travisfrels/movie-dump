@@ -18,7 +18,7 @@ namespace MovieDump.DataAccess
         public IEnumerable<Movie> GetMovies()
         {
             var res = new List<Movie>();
-            var moviesQuery =@"SELECT lib.name as libraryname, meta.title, meta.year, mp.size, CASE media.height WHEN 480 THEN 'DVD' WHEN 2160 THEN 'UHD' ELSE 'BLU-RAY' END AS format
+            var moviesQuery =@"SELECT lib.name as libraryname, meta.title, meta.year, mp.size, CASE media.height WHEN 480 THEN 'DVD' WHEN 2160 THEN '4K' ELSE 'BLU-RAY' END AS format
 	, media.width, media.height, media.duration, media.bitrate, media.container, media.video_codec as videocodec, media.audio_codec as audiocodec
     , media.audio_channels as audiochannels, media.frames_per_second as framespersecond, media.created_at as createdate, media.updated_at as lastupdated
 FROM media_items media
