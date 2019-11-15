@@ -13,8 +13,9 @@ SELECT
     meta.year AS [Year],
     CASE media.height WHEN 480 THEN 'DVD' WHEN 2160 THEN '4K' ELSE 'BLU-RAY' END AS [Format],
     media.duration AS [Duration],
-    media.video_codec as [VideoCodec],
-    media.audio_codec as [AudioCodec]
+    media.video_codec AS [VideoCodec],
+    media.audio_codec AS [AudioCodec],
+    mp.size / 1048576 AS [SizeMB]
 FROM media_items AS media
     INNER JOIN library_sections AS lib ON media.library_section_id = lib.id
     INNER JOIN metadata_items AS meta ON media.metadata_item_id = meta.id
