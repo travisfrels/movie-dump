@@ -12,12 +12,9 @@ namespace MovieDump.DataAccess
         {
             if (_config == null)
             {
-                using (var fs = File.OpenRead("config.json"))
+                using (var sr = new StreamReader(File.OpenRead("config.json")))
                 {
-                    using (var sr = new StreamReader(fs))
-                    {
-                        _config = JsonConvert.DeserializeObject<Config>(sr.ReadToEnd());
-                    }
+                    _config = JsonConvert.DeserializeObject<Config>(sr.ReadToEnd());
                 }
             }
             return _config;

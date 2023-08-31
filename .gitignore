@@ -5,3 +5,5 @@
 !.vscode/extensions.json
 bin
 obj
+*.exe
+*.csv

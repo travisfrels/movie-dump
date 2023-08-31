@@ -1,3 +1,3 @@
 {
-  "plexDbConnection" : "Data Source=C:\\Users\\travi\\AppData\\Local\\Plex Media Server\\Plug-In Support\\Databases\\com.plexapp.plugins.library.db"
+  "plexDbConnection": "Data Source=C:\\temp\\plex.db"
 }
